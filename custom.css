@@ -1,0 +1,38 @@
+body {
+  width: 500px;
+  height: 500px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+.content {
+  width: 500px;
+
+  height: 500px;
+}
+.ui-button {
+  color: rgb(0, 0, 0);
+}
+.ui-button span {
+  font-size: 1.2rem;
+  font-family: Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  /* text-shadow: 1px 1px black; */
+}
+img {
+  height: 390px;
+  width: 390px;
+}
+.ui.ui-enumeration {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.ui.ui-pagination.horizontal {
+  display: none;
+}
