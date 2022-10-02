@@ -1,16 +1,7 @@
-body {
-  width: 500px;
-  height: 500px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
 .content {
-  width: 500px;
+  /* width: 500px;
 
-  height: 500px;
+  height: 500px; */
 }
 .ui-button {
   color: rgb(0, 0, 0);
@@ -24,8 +15,8 @@ body {
   /* text-shadow: 1px 1px black; */
 }
 img {
-  height: 390px;
-  width: 390px;
+  height: 400px;
+  width: 400px;
 }
 .ui.ui-enumeration {
   font-family: "Courier New", Courier, monospace;
