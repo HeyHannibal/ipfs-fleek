@@ -1,5 +1,6 @@
 !(function (FOLIO, undefined) {
   "use strict";
+  console.log("ass");
 
   /*
             1) How to use:
@@ -13,27 +14,27 @@
   FOLIO.config = {
     content: {
       //transition : 'scale-up'
-      ui: "icon",
+      // ui: "icon",
     },
 
     project: {
-      //       enumeration: true,
+      // enumeration: false,
       pagination: false,
+      buttonSection: "gallery",
     },
 
     thumbnails: {
       //transition : 'up'
       //grid : '3x2',
       //fit : 'cover'
-      enumeration: true,
     },
 
     sidebar: {
       align: "top",
-      hidden: false,
+      // hidden: false,
     },
     email: {
-      text: "Email me", // Email label
+      text: "MAIL", // Email label
       address: "you@somedomain.com", // Your email address
     },
   };

@@ -15,8 +15,10 @@
   /* text-shadow: 1px 1px black; */
 }
 img {
-  height: 400px;
-  width: 400px;
+  max-height: 90%;
+  max-width: 90%;
+  width: auto;
+  height: auto;
 }
 .ui.ui-enumeration {
   font-family: "Courier New", Courier, monospace;
@@ -26,4 +28,10 @@ img {
 
 .ui.ui-pagination.horizontal {
   display: none;
+}
+
+.-text-heading {
+  font-family: "Helvetica";
+  font-weight: 900;
+  letter-spacing: 2px;
 }
