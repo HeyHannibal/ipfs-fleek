@@ -1,8 +1,3 @@
-.content {
-  /* width: 500px;
-
-  height: 500px; */
-}
 .ui-button {
   color: rgb(0, 0, 0);
 }
@@ -13,12 +8,6 @@
   text-decoration: none;
   letter-spacing: 2px;
   /* text-shadow: 1px 1px black; */
-}
-img {
-  /* max-height: 90%;
-  max-width: 90%;
-  width: auto;
-  height: auto; */
 }
 .ui.ui-enumeration {
   font-family: "Courier New", Courier, monospace;
