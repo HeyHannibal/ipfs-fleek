@@ -15,10 +15,10 @@
   /* text-shadow: 1px 1px black; */
 }
 img {
-  max-height: 90%;
+  /* max-height: 90%;
   max-width: 90%;
   width: auto;
-  height: auto;
+  height: auto; */
 }
 .ui.ui-enumeration {
   font-family: "Courier New", Courier, monospace;
