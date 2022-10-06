@@ -1,9 +1,16 @@
 .ui-button {
   color: rgb(0, 0, 0);
 }
+div.content {
+  background-color: #efece9;
+}
+img.landscape {
+  max-width: 900px;
+  max-height: 900px;
+}
 .ui-button span {
   font-size: 1.2rem;
-  font-family: Helvetica, sans-serif;
+  font-family: "Helvetica", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -23,4 +30,15 @@
   font-family: "Helvetica";
   font-weight: 900;
   letter-spacing: 2px;
+}
+.red {
+  color: #da0021;
+}
+#chldlink {
+  font-size: 1.2rem;
+  font-family: "Helvetica", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  /* text-shadow: 1px 1px black; */
 }
