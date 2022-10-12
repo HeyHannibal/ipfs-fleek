@@ -24,7 +24,8 @@
   <script>
     let background = document.querySelectorAll(".back-animation");
     let random = (arr) => arr[Math.floor(Math.random() * arr.length)];
-    function moveImg() {
+
+    function moveImg(runOnce) {
       background.forEach((item) => {
         let arr = [10, 25, 30];
         let pm = ["-"];
@@ -36,12 +37,13 @@
         item.style.width = size;
         item.style.height = size;
       });
-      setInterval(() => {
-        moveImg();
-      }, 15000);
+      if (runOnce)
+        setInterval(() => {
+          moveImg();
+        }, 15000);
     }
     setTimeout(() => {
-      moveImg();
+      moveImg(true);
     }, 18000);
   </script>
 </html>
