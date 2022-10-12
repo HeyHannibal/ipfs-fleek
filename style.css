@@ -7,14 +7,15 @@ html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 98vw;
+  width: 100vw;
   font-family: "Helvetica";
 
   backdrop-filter: blur(10px);
   margin: 0;
-  animation: fadeInblack ease 3s;
+  animation: fadeInblack ease-in 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  overflow: hidden;
 }
 #blur {
   width: 100vw;
@@ -22,18 +23,8 @@ html {
   position: absolute;
   left: 0;
   top: 0;
-  animation: fadeInAnimation ease-in 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
-@keyframes fadeInAnimation {
-  0% {
-    backdrop-filter: blur(10px);
-  }
-  100% {
-    backdrop-filter: blur(0px);
-  }
-}
+
 @keyframes fadeInblack {
   0% {
     background-color: #000000;
@@ -43,9 +34,22 @@ html {
   }
 }
 main#landing {
+  z-index: 10;
+
   display: flex;
   flex-direction: column;
   color: black;
+  /* animation: fadeInAnimation ease-in 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; */
+}
+@keyframes fadeInAnimation {
+  0% {
+    backdrop-filter: blur(10px);
+  }
+  100% {
+    backdrop-filter: blur(0px);
+  }
 }
 a {
   color: black;
@@ -65,3 +69,161 @@ a#generate {
 a:hover {
   transform: scale(1.05);
 }
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+.back-animation {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+img#img1 {
+  height: 250vh;
+  width: 250vh;
+  opacity: 0;
+  animation: fadeInOut ease-in 15s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+img#img2 {
+  height: 250vh;
+  width: 250vh;
+  opacity: 0;
+  animation: fadeInOut2 ease-in 15s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+img#img3 {
+  height: 250vh;
+  width: 250vh;
+  opacity: 0;
+  background-position: center center;
+  animation: fadeInOut3 ease-in 15s;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.2;
+  }
+  30%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut2 {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  55% {
+    opacity: 0.2;
+  }
+  65%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut3 {
+  0%,
+  65% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0.2;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.bg {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 200vh;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png")
+    repeat 0 0;
+  background-repeat: repeat;
+
+  opacity: 0.5;
+  visibility: visible;
+}
+/* body {
+  background-color: #111111;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png")
+    repeat 0 0;
+  background-repeat: repeat;
+  /* animation: bg-animation 0.2s infinite; */
+/* opacity: 0.9;
+  visibility: visible; */
+/* } */
+
+/* @keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+} */

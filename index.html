@@ -13,6 +13,35 @@
       <a href="gallery/index.html">Gallery</a>
       <a href="video/video.html">Creation Process</a>
     </main>
-    <div id="blur"></div>
+    <div class="bg"></div>
+
+    <div id="background">
+      <img class="back-animation" id="img1" src="0b.png" />
+      <img class="back-animation" id="img2" src="17b.png" />
+      <img class="back-animation" id="img3" src="22b.png" />
+    </div>
   </body>
+  <script>
+    let background = document.querySelectorAll(".back-animation");
+    let random = (arr) => arr[Math.floor(Math.random() * arr.length)];
+    function moveImg() {
+      background.forEach((item) => {
+        let arr = [10, 25, 30];
+        let pm = ["-"];
+        item.style.transform = `translate(${random(pm)}${random(arr)}%,${random(
+          pm
+        )}${random(arr)}%)`;
+
+        let size = `${random([150, 300, 200])}vh`;
+        item.style.width = size;
+        item.style.height = size;
+      });
+      setInterval(() => {
+        moveImg();
+      }, 15000);
+    }
+    setTimeout(() => {
+      moveImg();
+    }, 18000);
+  </script>
 </html>
