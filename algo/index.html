@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="libraries/p5.min.js"></script>
+
+    <script src="p5.pattern.js"></script>
+  </head>
+
+  <body>
+    <div id="UI" class="sample">
+      <!-- <div class="inputs">
+        <label for="gridSize">Size</label>
+        <input
+          name="gridSize"
+          class="number"
+          type="number"
+          min="3"
+          max="12"
+          id="gridSize"
+        />
+      </div>
+
+      <div class="inputs">
+        <label for="NShapes">N Shapes</label>
+        <input
+          name="NShapes"
+          class="number"
+          type="number"
+          min="1"
+          max="60"
+          id="NShapes"
+        />
+      </div>
+      <div class="inputs checkbox">
+        <label id="autoDwnld" for="autoDownload">Auto Save</label>
+        <input type="checkbox" name="autoDownload" id="autoDownload" />
+      </div>
+      <div class="inputs checkbox">
+        <label id="downloadSqnc" for="downloadSequence">Save Sequence</label>
+        <input type="checkbox" name="downloadSequence" id="downloadSequence" />
+      </div>
+      <button id="downloadBtn">Download</button> -->
+      <button id="createBtn" class="ripple" style="opacity: 10">create</button>
+    </div>
+
+    <!-- <div id="canvasContainer" style="opacity: 0.4">
+      <div id="colorSelector">
+        <div id="colorPalletes"></div>
+        <div id="addingColors">
+          <input type="color" id="bckgrnd" class="colorpick" value="#fafeff" />
+          <input type="color" id="line" class="colorpick" value="#777777" />
+          <input type="color" id="hlt" class="colorpick" value="#01b7c2" />
+          <button id="addPallete">Add</button>
+        </div>
+        <label for="colorsSelect" id="selectAllColors"
+          >Select All<input
+            type="checkbox"
+            name="colorsSelect"
+            checked="true"
+            id="selectAllColors"
+        /></label>
+      </div>
+    </div> -->
+
+    <script src="mysketch.js"></script>
+
+    <script src="components/roundCorners.js"></script>
+    <script src="components/roundness.js"></script>
+    <script src="components/random.js"></script>
+    <script src="components/circles.js"></script>
+    <script src="UI.js"></script>
+  </body>
+</html>
+
+<!-- const shp = { -->
+<!-- b21: (xy, width, height) => { -->
+<!-- fill("#cabebe23"); -->
+<!--  -->
+<!-- beginShape(); -->
+<!--  -->
+<!-- drawHalf(cg[0], half.l); -->
+<!-- drawHalf(cg[12], quad.tr); -->
+<!-- drawHalf(cg[15], half.b); -->
+<!--  -->
+<!-- drawReverseConnect(g[6][6], quad.rev.tr); -->
+<!-- drawHalf(cg[10], quad.bl); -->
+<!-- drawReverseConnect(g[4][4], quad.rev.tr); -->
+<!--  -->
+<!-- drawHalf(cg[5], quad.bl); -->
+<!--  -->
+<!-- drawReverseConnect(g[2][2], quad.rev.tr); -->
+<!--  -->
+<!-- endShape(CLOSE); -->
+<!--  -->
+<!-- beginShape(); -->
+<!-- }, -->
+<!-- tbone: (x, x2, y, offset) => { -->
+<!-- fill("#ffffff00"); -->
+<!-- beginShape(); -->
+<!--  -->
+<!-- drawHalf(cg[x], half.l); -->
+<!-- drawHalf(cg[x2], half.r); -->
+<!-- drawReverseConnect(cg[9], quad.rev.tl); -->
+<!-- drawHalf(cg[y], half.b); -->
+<!-- drawReverseConnect(cg[1], quad.rev.tr); -->
+<!-- endShape(CLOSE); -->
+<!-- beginShape(); -->
+<!-- }, -->
+<!-- pill: (one, two) => { -->
+<!-- beginShape(); -->
+<!-- if ((one - two) % 2 !== 0 || two - one === Math.abs(2)) { -->
+<!-- drawHalf(cg[one], half.t); -->
+<!-- drawHalf(cg[two], half.b); -->
+<!-- } -->
+<!-- if ((one - two) % 4 === 0) { -->
+<!-- drawHalf(cg[one], half.l); -->
+<!-- drawHalf(cg[two], half.r); -->
+<!-- } -->
+<!-- endShape(CLOSE); -->
+<!-- }, -->
+<!-- strokes: (fn, weight, color, offset) => { -->
+<!-- push(); -->
+<!-- strokeWeight(weight); -->
+<!-- stroke(color); -->
+<!-- fn(); -->
+<!-- pop(); -->
+<!-- }, -->
+<!-- oo: (one, two) => { -->
+<!-- beginShape(); -->
+<!-- drawHalf(cg[one], half.b); -->
+<!-- drawHalf(cg[one], quad.tl); -->
+<!-- drawReverseConnect(cg[one - 1], quad.rev.br); -->
+<!-- drawHalf(cg[two], quad.tl); -->
+<!-- drawHalf(cg[two], half.r); -->
+<!-- drawReverseConnect(cg[two + 1], quad.rev.tl); -->
+<!-- endShape(); -->
+<!-- }, -->
+<!-- ooo: (one, two) => { -->
+<!-- if ((two - one) % 3 === 0) { -->
+<!-- beginShape(); -->
+<!-- drawHalf(cg[one], half.b); -->
+<!-- drawHalf(cg[one], quad.tl); -->
+<!-- drawReverseConnect(cg[one - 1], quad.rev.br); -->
+<!-- drawHalf(cg[one + 3], quad.tl); -->
+<!-- drawReverseConnect(cg[one + 2], quad.rev.br); -->
+<!-- drawHalf(cg[two], quad.tl); -->
+<!-- drawHalf(cg[two], half.r); -->
+<!-- drawReverseConnect(cg[two + 1], quad.rev.tl); -->
+<!-- drawHalf(cg[one + 3], quad.br); -->
+<!-- drawReverseConnect(cg[one + 4], quad.rev.tl); -->
+<!--  -->
+<!-- endShape(); -->
+<!-- } -->
+<!-- }, -->
+<!-- l: (one, two, elbow) => { -->
+<!-- beginShape(); -->
+<!-- drawHalf(cg[one], half.l); -->
+<!-- drawReverseConnect(cg[one - 1], quad.rev.br); -->
+<!-- drawHalf(cg[two], quad.tl); -->
+<!-- drawHalf(cg[two], quad.tr); -->
+<!-- drawHalf(cg[elbow], quad.br); -->
+<!--  -->
+<!-- endShape(CLOSE); -->
+<!-- }, -->
+<!-- }; -->
+<!-- const shp = {
+  b21: (xy, width, height) => {
+    fill("#cabebe23");
+
+    beginShape();
+
+    drawHalf(cg[0], half.l);
+    drawHalf(cg[12], quad.tr);
+    drawHalf(cg[15], half.b);
+
+    drawReverseConnect(g[6][6], quad.rev.tr);
+    drawHalf(cg[10], quad.bl);
+    drawReverseConnect(g[4][4], quad.rev.tr);
+
+    drawHalf(cg[5], quad.bl);
+
+    drawReverseConnect(g[2][2], quad.rev.tr);
+
+    endShape(CLOSE);
+
+    beginShape();
+  },
+  tbone: (x, x2, y, offset) => {
+    fill("#ffffff00");
+    beginShape();
+
+    drawHalf(cg[x], half.l);
+    drawHalf(cg[x2], half.r);
+    drawReverseConnect(cg[9], quad.rev.tl);
+    drawHalf(cg[y], half.b);
+    drawReverseConnect(cg[1], quad.rev.tr);
+    endShape(CLOSE);
+    beginShape();
+  },
+  pill: (one, two) => {
+    beginShape();
+    if ((one - two) % 2 !== 0 || two - one === Math.abs(2)) {
+      drawHalf(cg[one], half.t);
+      drawHalf(cg[two], half.b);
+    }
+    if ((one - two) % 4 === 0) {
+      drawHalf(cg[one], half.l);
+      drawHalf(cg[two], half.r);
+    }
+    endShape(CLOSE);
+  },
+  strokes: (fn, weight, color, offset) => {
+    push();
+    strokeWeight(weight);
+    stroke(color);
+    fn();
+    pop();
+  },
+  oo: (one, two) => {
+    beginShape();
+    drawHalf(cg[one], half.b);
+    drawHalf(cg[one], quad.tl);
+    drawReverseConnect(cg[one - 1], quad.rev.br);
+    drawHalf(cg[two], quad.tl);
+    drawHalf(cg[two], half.r);
+    drawReverseConnect(cg[two + 1], quad.rev.tl);
+    endShape();
+  },
+  ooo: (one, two) => {
+    if ((two - one) % 3 === 0) {
+      beginShape();
+      drawHalf(cg[one], half.b);
+      drawHalf(cg[one], quad.tl);
+      drawReverseConnect(cg[one - 1], quad.rev.br);
+      drawHalf(cg[one + 3], quad.tl);
+      drawReverseConnect(cg[one + 2], quad.rev.br);
+      drawHalf(cg[two], quad.tl);
+      drawHalf(cg[two], half.r);
+      drawReverseConnect(cg[two + 1], quad.rev.tl);
+      drawHalf(cg[one + 3], quad.br);
+      drawReverseConnect(cg[one + 4], quad.rev.tl);
+
+      endShape();
+    }
+  },
+  l: (one, two, elbow) => {
+    beginShape();
+    drawHalf(cg[one], half.l);
+    drawReverseConnect(cg[one - 1], quad.rev.br);
+    drawHalf(cg[two], quad.tl);
+    drawHalf(cg[two], quad.tr);
+    drawHalf(cg[elbow], quad.br);
+
+    endShape(CLOSE);
+  },
+}; -->
