@@ -1,0 +1,78 @@
+body,
+html {
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Helvetica";
+
+  backdrop-filter: blur(10px);
+  margin: 0;
+  animation: fadeInblack ease-in 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+}
+
+#back {
+  z-index: 100;
+}
+a {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #efece9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 2px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: underline; /* Or whatever color you want */
+  transition: transform 0.2s ease;
+}
+a#generate {
+  color: #efece9;
+}
+a:hover {
+  transform: scale(1.05);
+}
+
+video {
+  width: 700px;
+  height: 700px;
+}
+@media only screen and (max-width: 640px) {
+  video {
+    max-width: 450px;
+    max-height: 450px;
+  }
+}
+@media only screen and (max-width: 540px) {
+  video {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+@media only screen and (max-width: 460px), screen and (max-height: 520px) {
+  video {
+    max-width: 360px;
+    max-height: 360px;
+  }
+}
+
+@media only screen and (max-width: 430px), screen and (max-height: 470px) {
+  video {
+    max-width: 330px;
+    max-height: 330px;
+  }
+}
+@media only screen and (max-width: 380px), screen and (max-height: 400px) {
+  video {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

@@ -3,7 +3,7 @@ setTimeout(() => {
   menu.childNodes[0].remove();
   let a = document.createElement("a");
   a.id = "chldlink";
-  a.textContent = " fullscreen";
+  a.textContent = "back";
   a.href = "../index.html";
   menu.appendChild(a);
 }, 1);

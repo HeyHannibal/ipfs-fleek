@@ -92,6 +92,7 @@ img#img1 {
   animation-fill-mode: forwards;
   animation-delay: 3s;
   animation-iteration-count: infinite;
+  transform: translate(-30%, -30%);
 }
 img#img2 {
   height: 250vh;
@@ -101,6 +102,7 @@ img#img2 {
   animation-fill-mode: forwards;
   animation-delay: 3s;
   animation-iteration-count: infinite;
+  transform: translate(-30%, -30%);
 }
 img#img3 {
   height: 250vh;
@@ -111,6 +113,7 @@ img#img3 {
   animation-fill-mode: forwards;
   animation-delay: 3s;
   animation-iteration-count: infinite;
+  transform: translate(-30%, -30%);
 }
 @keyframes fadeInOut {
   0% {
@@ -167,7 +170,7 @@ img#img3 {
     repeat 0 0;
   background-repeat: repeat;
 
-  opacity: 0.5;
+  opacity: 0.4;
   visibility: visible;
 }
 /* body {

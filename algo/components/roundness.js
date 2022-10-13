@@ -26,8 +26,8 @@ function drawHalf(point, segment, offset, pattern) {
     let x = cos(radians(i)) * radius;
     let y = sin(radians(i)) * radius;
 
-    vertex(x + point.x + offset[0], y + point.y + offset[1]);
-    if (pattern) vertexPattern(x + point.x + offset[0], y + point.y + offset[1]);
+    vertex(x + point.x * 2 + offset[0], y + point.y * 2 + offset[1]);
+    if (pattern) vertexPattern(x + point.x * 2 + offset[0], y + point.y * 2 + offset[1]);
   }
 }
 
@@ -36,7 +36,7 @@ function drawHalfRev(point, segment, offset, pattern) {
     let x = cos(radians(i)) * radius;
     let y = sin(radians(i)) * radius;
 
-    vertex(x + point.x + offset[0], y + point.y + offset[1]);
-    if (pattern) vertexPattern(x + point.x + offset[0], y + point.y + offset[1]);
+    vertex(x + point.x * 2 + offset[0], y + point.y * 2 + offset[1]);
+    if (pattern) vertexPattern(x + point.x * 2 + offset[0], y + point.y * 2 + offset[1]);
   }
 }

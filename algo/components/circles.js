@@ -46,7 +46,7 @@ function centerCircles() {
         if (indx % 2 > 0) {
           fill("#262525");
           if (g.length === 5 && (indx > 3 || index > 3)) return;
-          if (chances(5, 20)) circles(pointObj);
+          if (chances(10, 5)) circles(pointObj);
         }
       });
   });
@@ -90,7 +90,7 @@ function theEye(pointObj) {
 function overCircles(pointObj) {
   push();
   strokeWeight(0);
-  if (chances(1, 25)) bigOne(pointObj);
+  if (chances(1, 40)) bigOne(pointObj);
   else if (chances(4, 30)) theEye(pointObj);
   pop();
 }

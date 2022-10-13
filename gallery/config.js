@@ -20,7 +20,7 @@
     project: {
       // enumeration: false,
       pagination: false,
-      buttonSection: "gallery",
+      buttonSection: "preview",
     },
 
     thumbnails: {
