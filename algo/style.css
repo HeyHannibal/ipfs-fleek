@@ -110,6 +110,7 @@ a:hover,
   left: 0;
   align-self: center;
   font-size: 1.1rem;
+  display: flex;
 }
 #input input {
   border-radius: 0px;
@@ -145,6 +146,9 @@ a:hover,
   canvas {
     max-width: 450px;
     max-height: 450px;
+  }
+  #input {
+    flex-direction: column;
   }
 }
 @media only screen and (max-width: 540px) {
