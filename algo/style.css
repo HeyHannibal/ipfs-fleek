@@ -109,11 +109,13 @@ a:hover,
   position: absolute;
   left: 0;
   align-self: center;
+  font-size: 1.1rem;
 }
 #input input {
   border-radius: 0px;
   border: 1px solid rgb(46, 46, 46);
   margin-left: 4px;
+  max-width: 50px;
 }
 
 #input input:focus {
